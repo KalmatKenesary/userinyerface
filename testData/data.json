@@ -1,0 +1,23 @@
+{
+    "validUserData": {
+        "email": "westcost@gmail.com",
+        "password": "mWerty1_lBE33"
+    },
+    "invalidUserData": {
+        "password": "12345678910"
+    },
+    "inputPlaceholders": {
+        "passwordInput": "Choose Password",
+        "emailInput": "Your email",
+        "domainInput": "Domain"
+    },
+    "buttonClasses": {
+        "nextCardButton": "button--secondary",
+        "helpFormButton": "help-form__help-button"
+    },
+    "labelClasses": {
+        "helpResponseLabel": "help-form__response",
+        "timerLabel": "timer timer--white timer--center"
+    },
+    "emailSplitSign": "@"
+}

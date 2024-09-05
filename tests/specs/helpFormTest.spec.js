@@ -1,25 +1,15 @@
-import { test, expect } from '@playwright/test';
-import { Button, Label }  from '../../framework/elements/index.js';
-import BaseElement from '../../framework/elements/BaseElement.js';
+import { test, expect } from "../../fixtures/page.fixtures.js";
+import * as data from '../../testData/data.json';
 
-test('Help form', async ({ page }) => {
-  await page.goto('https://userinyerface.com/');
+test('Help form test', async ({ mainPage, firstCardPage }) => {
 
-  let noButton = new Button(page, '//button[@class="start__button"]', 'Unique button of the main page');
-  let noButtonIsVisible = await noButton.state().isVisible();
-  await expect(noButtonIsVisible).toEqual(true);
+  await expect(mainPage.isPageOpened()).toBeTruthy();
 
-  let hereButton = new Button(page, '//a[@href="/game.html"]', 'Button for open game');
-  await hereButton.click();
+  await mainPage.clickHereButton();
 
-  let loginForm = new BaseElement(page, '//div[@class="login-form"]', 'Unique login form of game page');
-  let loginFormIsVisible = await loginForm.state().isVisible();
-  await expect(loginFormIsVisible).toEqual(true);
+  await expect(firstCardPage.isPageOpened()).toBeTruthy();
 
-  let helpButton = new Button(page, '//a[@class="help-form__help-button"]', 'Button for help response');
-  await helpButton.click();
+  await firstCardPage.clickFirstCardPageButton(data.buttonClasses.helpFormButton);
 
-  let helpResponseLabel = new Label(page, '//div[@class="help-form__response"]', 'Reponse label');
-  let helpResponseLabelIsVisible = await helpResponseLabel.state().isVisible();
-  await expect(helpResponseLabelIsVisible).toEqual(true);
+  await expect(firstCardPage.firstCardPageLabelIsDisplayed(data.labelClasses.helpResponseLabel)).toBeTruthy();
 });

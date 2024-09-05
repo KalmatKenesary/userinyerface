@@ -9,5 +9,21 @@ export default class ElementStateProvider {
     let result = await this.selector.isVisible();
     return result;
   }
+
+  async waitForVisible() {
+    await this.selector.waitFor();
+  }
+
+  async waitForAttached() {
+    await this.selector.waitFor('attached');
+  }
+
+  async waitForDetached() {
+    await this.selector.waitFor('detached');
+  }
+
+  async waitForHidden() {
+    await this.selector.waitFor('hidden');
+  }
 }
 

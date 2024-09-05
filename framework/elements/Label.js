@@ -1,4 +1,4 @@
-import BaseElement from "./BaseElement";
+import BaseElement from "./BaseElement.js";
 
 export class Label extends BaseElement {
   constructor(page, locator, name) {

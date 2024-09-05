@@ -1,6 +1,5 @@
 import ElementStateProvider from "./helper/StateProvider";
 
-
 export default class BaseElement {
   constructor(page, locator, name) {
     this.page = page;
@@ -16,6 +15,10 @@ export default class BaseElement {
       selector = this.locator;
     }
     return selector;
+  }
+
+  getName() {
+    return this.name;
   }
 
   state() {

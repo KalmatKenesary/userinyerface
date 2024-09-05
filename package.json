@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test"
+    "test": "npx playwright test",
+    "test:helpForm": "npx playwright test tests/specs/helpFormTest.spec.js",
+    "test:timer": "npx playwright test tests/specs/timerTest.spec.js",
+    "test:form": "npx playwright test tests/specs/formTest.spec.js",
+    "debug": "npx playwright test --debug",
+    "report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",
