@@ -22,5 +22,6 @@
         "helpResponseLabel": "help-form__response",
         "timerLabel": "timer timer--white timer--center"
     },
-    "emailSplitSign": "@"
+    "emailSplitSign": "@",
+    "timerStart": "00:00:00"
 }
