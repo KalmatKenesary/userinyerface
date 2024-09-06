@@ -1,7 +1,6 @@
 {
   "name": "userinyerface",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
     "test:helpForm": "npx playwright test tests/specs/helpFormTest.spec.js",
@@ -17,5 +16,8 @@
   "devDependencies": {
     "@playwright/test": "^1.46.1",
     "@types/node": "^22.5.3"
+  },
+  "dependencies": {
+    "winston": "^3.14.2"
   }
 }

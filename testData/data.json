@@ -1,7 +1,10 @@
 {
     "validUserData": {
         "email": "westcost@gmail.com",
-        "password": "mWerty1_lBE33"
+        "password": "mWerty1_lBE33",
+        "dropDownEmailItems": {
+            "com": ".com"
+        }
     },
     "invalidUserData": {
         "password": "12345678910"

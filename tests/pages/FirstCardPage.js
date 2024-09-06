@@ -1,10 +1,11 @@
 import { Button, Label, Input, Checkbox } from '../../framework/elements/index.js'
 import BaseForm from "../../framework/page/BaseForm.js";
+import BaseElement from '../../framework/elements/BaseElement.js';
 
 export class FirstCardPage extends BaseForm {
   constructor(page) {
     super(
-      new Label(page, '//div[@class="login-form"]', 'Unique login form of game page'),
+      new BaseElement(page, '//div[@class="login-form"]', 'Unique login form of game page'),
       'First card page'
     );
     
@@ -12,6 +13,8 @@ export class FirstCardPage extends BaseForm {
     this.firstCardPageLabel = (labelClass) => new Label(page, `//div[@class="${labelClass}"]`, 'First card page label');
     this.inputField = (placeholder) => new Input(page, `//input[@placeholder="${placeholder}"]`, `Input field for ${placeholder}`);
     this.termsAndConditionsCheckbox = new Checkbox(page, '//span[@class="checkbox"]', 'Checkbox for accept Terms and Conditions');
+    this.dropDownOpenerButton = new Button(page, '//div[@class="dropdown__opener"]', 'Button for open dropdown');
+    this.dropDownItemButton = (item) => new Button(page, `//div[@class="dropdown__list-item" and text()="${item}"]`, 'Button for choose item of dropdown');
   }
 
   async clickFirstCardPageButton(buttonClass) {
@@ -32,5 +35,13 @@ export class FirstCardPage extends BaseForm {
 
   async clickTermsAndConditionsCheckbox() {
     await this.termsAndConditionsCheckbox.click();
+  }
+
+  async clickDropDownOpenerButton() {
+    await this.dropDownOpenerButton.click();
+  }
+
+  async clickDropDownItem(item) {
+    await this.dropDownItemButton(item).click();
   }
 }
