@@ -6,6 +6,8 @@ test.skip('Timer test', async ({ mainPage, firstCardPage }) => {
 
   await mainPage.clickHereButton();
 
+  // Some hotfix code lines
+
   await expect(firstCardPage.isPageOpened()).toBeTruthy();
   let timerText = await firstCardPage.getFirstCardPageLabelText(data.labelClasses.timerLabel);
   await expect(timerText).toEqual(data.timerStart);

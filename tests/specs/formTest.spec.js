@@ -12,7 +12,7 @@ test('Test form with valid password', async ({ mainPage, firstCardPage, secondCa
     await expect(mainPageIsOpened).toBeTruthy();
   });
 
-  // first commit
+  // hello 1
 
   await allure.step('Click here button', async () => {
     await mainPage.clickHereButton();
