@@ -7,6 +7,8 @@ test('Help form test', async ({ mainPage, firstCardPage }) => {
 
   await mainPage.clickHereButton();
 
+  // second commit
+
   await expect(firstCardPage.isPageOpened()).toBeTruthy();
 
   await firstCardPage.clickFirstCardPageButton(data.buttonClasses.helpFormButton);
