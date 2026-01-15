@@ -5,6 +5,8 @@ test('Test form with valid password', async ({ mainPage, firstCardPage, secondCa
   let mainPageIsOpened = await mainPage.isPageOpened()
   await expect(mainPageIsOpened).toBeTruthy();
 
+  // first commit
+
   await mainPage.clickHereButton();
 
   let firstCardPageIsOpened = await firstCardPage.isPageOpened();
