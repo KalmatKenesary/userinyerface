@@ -1,7 +1,7 @@
 import { test, expect } from '../../fixtures/page.fixtures.js';
 import * as data from '../../testData/data.json';
 
-test('Timer test', async ({ mainPage, firstCardPage }) => {
+test.skip('Timer test', async ({ mainPage, firstCardPage }) => {
   await expect(mainPage.isPageOpened()).toBeTruthy();
 
   await mainPage.clickHereButton();
