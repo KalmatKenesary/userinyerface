@@ -14,6 +14,9 @@ test('Test form with valid password', async ({ mainPage, firstCardPage, secondCa
 
   // hello 1
 
+  const a = 1;
+  a = 2;
+
   await allure.step('Click here button', async () => {
     await mainPage.clickHereButton();
   });
@@ -63,6 +66,12 @@ test('Test form with valid password', async ({ mainPage, firstCardPage, secondCa
     let secondCardPageIsOpened = await secondCardPage.isPageOpened();
     await expect(secondCardPageIsOpened).toBeTruthy();
   });
+
+  await allure.attachment(
+    'Screenshot',
+    await page.screenshot(),
+    'image/png'
+  );
 });
 
 test.skip('Test form with invalid password', async ({ page, mainPage, firstCardPage, secondCardPage }) => {
