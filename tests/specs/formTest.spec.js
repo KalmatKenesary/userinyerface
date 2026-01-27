@@ -14,6 +14,9 @@ test('Test form with valid password', async ({ mainPage, firstCardPage, secondCa
 
   // hello 1
 
+  const a = 1;
+  a = 2;
+
   await allure.step('Click here button', async () => {
     await mainPage.clickHereButton();
   });
